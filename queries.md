@@ -22,6 +22,12 @@ WHERE `cfu`> 10;
 SELECT *
 FROM `students`
 WHERE DATEDIFF(NOW(), `date_of_birth`) > (365*30);
+
+/* oppure (3324)*/
+
+SELECT *
+FROM `students`
+WHERE TIMESTAMPDIFF(YEAR, `date_of_birth`, NOW())>30;
 ```
 
 - Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea (286)
